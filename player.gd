@@ -4,6 +4,8 @@ export var move_speed := 1.0
 var npc_area: Area2D = null
 var active := true
 
+var t := 0.0;
+
 signal npc_talked
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +18,8 @@ func _process(delta):
 		return
 
 	var velocity := Vector2(0, 0)
+
+	print(sin(0))
 	
 	if Input.is_action_pressed('ui_right'):
 		velocity.x = 1
